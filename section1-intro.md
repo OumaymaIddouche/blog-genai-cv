@@ -15,6 +15,8 @@ qui n'ont jamais existé.
 C'est comme un enfant qui regarde des milliers de dessins
 de chats, et qui finit par pouvoir en dessiner un tout seul.
 
+![Generative AI Schema](images/GENAI.webp)
+
 ## Un peu d'histoire
 
 Le GenAI en Computer Vision est une technologie récente.
