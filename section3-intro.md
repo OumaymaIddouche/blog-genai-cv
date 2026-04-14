@@ -1,5 +1,3 @@
-#  Generative AI en Computer Vision — Blog ELI5
-
 
 ## 3. VAE — Variational Autoencoder
 
