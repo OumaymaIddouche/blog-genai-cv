@@ -87,18 +87,7 @@ Loss totale = Reconstruction Loss + β × KL Loss
 
 ---
 
-### Exemple concret : interpolation de visages
 
-Avec un VAE entraîné sur des visages :
-
-```
-Visage A (z₁) ──────────────────────────► Visage B (z₂)
-     😐    →   😶   →   😊   →   😄   →   😁
-```
-
-En prenant des points intermédiaires entre z₁ et z₂, on obtient une **transition fluide et réaliste** entre deux visages — quelque chose d'impossible avec un simple GAN de base.
-
----
 
 
 > *Le VAE est un artiste qui résume chaque œuvre par une recette approximative, puis invente de nouvelles œuvres en mélangeant des recettes — le résultat est cohérent mais parfois un peu flou.*
