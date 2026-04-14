@@ -36,12 +36,6 @@ Aujourd'hui il existe plusieurs outils célèbres :
 - **Stable Diffusion** : gratuit et open source,
   accessible à tous
 
-  | Outil | Créé par | Gratuit ? | Point fort |
-|-------|----------|-----------|------------|
-| DALL-E | OpenAI | Non | Très facile à utiliser |
-| Midjourney | Midjourney Inc | Non | Qualité artistique élevée |
-| Stable Diffusion | Stability AI | Oui | Open source, personnalisable |
-
 ## Pourquoi utiliser le GenAI en Computer Vision ?
 
 En Computer Vision, entraîner un modèle nécessite
