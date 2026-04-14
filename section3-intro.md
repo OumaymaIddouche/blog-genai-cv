@@ -92,4 +92,26 @@ Loss totale = Reconstruction Loss + β × KL Loss
 
 > *Le VAE est un artiste qui résume chaque œuvre par une recette approximative, puis invente de nouvelles œuvres en mélangeant des recettes — le résultat est cohérent mais parfois un peu flou.*
 
+## Exemple concret : reconstruction de vêtements avec un VAE
 
+Un Variational Autoencoder (VAE) peut apprendre à représenter des objets comme des vêtements ou des chaussures, puis tenter de les reconstruire à partir de cette représentation.
+
+Dans cet exemple, le modèle est entraîné sur des images issues du dataset *Fashion MNIST*. Une image est ensuite donnée en entrée au modèle, qui essaie de la reconstruire après l’avoir compressée dans un espace latent.
+
+![Reconstruction VAE](./images/vae_example.jpg)
+
+**Explication :**
+
+- **Original** : image réelle (pull ou chaussure)  
+- **VAE** : image reconstruite par le modèle  
+- **B-Caps** : autre méthode utilisée pour comparaison  
+
+On observe que le VAE parvient à reproduire la forme générale de l’objet. Cependant, les images reconstruites sont légèrement floues, ce qui constitue une limitation classique de ce modèle.
+
+### Interprétation
+
+Le VAE peut être vu comme un système qui apprend à résumer une image sous forme de variables latentes, puis à la reconstruire à partir de ce résumé. La reconstruction reste cohérente, mais perd en précision.
+
+### Conclusion
+
+Cet exemple montre que le VAE comprend la structure globale des données et peut les reconstruire. Toutefois, en raison de son approche probabiliste, les résultats sont généralement moins nets que les images originales.
