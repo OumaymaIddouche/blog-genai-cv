@@ -1,5 +1,5 @@
 
-## Explication ELI5 de l'architecture GAN
+## 2. Explication ELI5 de l'architecture GAN
 
 Un réseau antagoniste génératif (GAN) se compose de deux parties:
 *	**Le générateur** apprend à générer des données plausibles. Les instances générées deviennent des exemples d'entraînement négatifs pour le discriminateur.
