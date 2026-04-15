@@ -180,6 +180,7 @@ Pense à un VAE comme une **machine à smoothies magique** dans une cuisine :
 ---
 
 ###  Architecture — comment ça marche
+
 <p align="center">
   <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="400"><br>
   <em>Architecture du VAE : l’encodeur compresse l’image en espace latent, puis le décodeur la reconstruit.</em>
