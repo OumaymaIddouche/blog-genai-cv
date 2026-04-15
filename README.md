@@ -15,7 +15,10 @@ qui n'ont jamais existé.
 C'est comme un enfant qui regarde des milliers de dessins
 de chats, et qui finit par pouvoir en dessiner un tout seul.
 
-![Generative AI Schema](images/GENAI.webp)
+<p align="center">
+  <img src="images/GENAI.webp"><br>
+  <em>Schéma du Generative AI : le modèle apprend à partir de données existantes pour générer de nouvelles images.</em>
+</p>
 
 ## Un peu d'histoire
 
@@ -67,8 +70,9 @@ Résultat final : Les faux billets deviennent indétectables
 
 Architecture global :
  
-<p >
-  <img src="images/1.png" width="500">
+<p align="center">
+  <img src="images/1.png" width="400"><br>
+  <em>Architecture du GAN : le générateur crée des images et le discriminateur évalue leur authenticité.</em>
 </p>
 
 
@@ -91,8 +95,9 @@ Pendant l'entraînement du discriminateur:
 2.	La perte du discriminateur pénalise le discriminateur pour avoir mal classé une instance réelle comme fausse ou une instance fausse comme réelle.
 3.	Le discriminateur met à jour ses poids via la propagation inverse à partir de la perte du discriminateur via le réseau du discriminateur.
 
-<p >
-  <img src="images/discriminateure.png" width="500">
+<p align="center">
+  <img src="images/discriminateure.png" width="350"><br>
+  <em>Le discriminateur apprend à distinguer les images réelles des images générées.</em>
 </p>
  
 ## Le générateur : 
@@ -105,9 +110,11 @@ L'entraînement du générateur nécessite une intégration plus étroite entre 
 * 	sortie du discriminateur
 *   perte du générateur, qui pénalise le générateur pour ne pas avoir réussi à tromper le discriminateur
  
-<p >
-  <img src="images/generateur.png" width="500">
+<p align="center">
+  <img src="images/generateur.png" width="350"><br>
+  <em>Le générateur transforme un bruit aléatoire en image pour tromper le discriminateur.</em>
 </p>
+
 
 - Bruit aléatoire -> Generator -> Image générée ->Discriminator (juge)
 
@@ -173,8 +180,9 @@ Pense à un VAE comme une **machine à smoothies magique** dans une cuisine :
 ---
 
 ###  Architecture — comment ça marche
-<p >
-  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="500">
+<p align="center">
+  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="400"><br>
+  <em>Architecture du VAE : l’encodeur compresse l’image en espace latent, puis le décodeur la reconstruit.</em>
 </p>
 
 
@@ -240,8 +248,9 @@ Un Variational Autoencoder (VAE) peut apprendre à représenter des objets comme
 
 Dans cet exemple, le modèle est entraîné sur des images issues du dataset *Fashion MNIST*. Une image est ensuite donnée en entrée au modèle, qui essaie de la reconstruire après l’avoir compressée dans un espace latent.
  
-<p >
-  <img src="images/vae_example.jpg" width="500">
+<p align="center">
+  <img src="images/vae_example.jpg" width="400"><br>
+  <em>Exemple de reconstruction : le VAE reproduit l’image mais avec un léger flou.</em>
 </p>
 
 **Explication :**
