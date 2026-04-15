@@ -1,6 +1,10 @@
 
 # Blog : Generative AI en Computer Vision
-
+## Auteurs
+- Oumayma Iddouche
+- Ahlame Soulaimi
+- Douae Nacir
+- Mohamed Amine Agrar
 ## Table des matières
 1. [Introduction au Generative AI en Computer Vision](#introduction-au-generative-ai-en-computer-vision)
    - [C'est quoi le Generative AI ?](#cest-quoi-le-generative-ai-)
