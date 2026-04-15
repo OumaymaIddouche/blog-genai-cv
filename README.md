@@ -71,7 +71,7 @@ Résultat final : Les faux billets deviennent indétectables
 Architecture global :
  
 <p align="center">
-  <img src="images/1.png" width="400"><br>
+  <img src="images/1.png" width="500"><br>
   <em>Architecture du GAN : le générateur crée des images et le discriminateur évalue leur authenticité.</em>
 </p>
 
@@ -96,7 +96,7 @@ Pendant l'entraînement du discriminateur:
 3.	Le discriminateur met à jour ses poids via la propagation inverse à partir de la perte du discriminateur via le réseau du discriminateur.
 
 <p align="center">
-  <img src="images/discriminateure.png" width="350"><br>
+  <img src="images/discriminateure.png" width="450"><br>
   <em>Le discriminateur apprend à distinguer les images réelles des images générées.</em>
 </p>
  
@@ -111,7 +111,7 @@ L'entraînement du générateur nécessite une intégration plus étroite entre 
 *   perte du générateur, qui pénalise le générateur pour ne pas avoir réussi à tromper le discriminateur
  
 <p align="center">
-  <img src="images/generateur.png" width="350"><br>
+  <img src="images/generateur.png" width="450"><br>
   <em>Le générateur transforme un bruit aléatoire en image pour tromper le discriminateur.</em>
 </p>
 
