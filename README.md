@@ -68,7 +68,7 @@ Résultat final : Les faux billets deviennent indétectables
 Architecture global :
  
 <p >
-  <img src="images/1.png" width="600">
+  <img src="images/1.png" width="500">
 </p>
 
 
@@ -92,7 +92,7 @@ Pendant l'entraînement du discriminateur:
 3.	Le discriminateur met à jour ses poids via la propagation inverse à partir de la perte du discriminateur via le réseau du discriminateur.
 
 <p >
-  <img src="images/discriminateure.png" width="600">
+  <img src="images/discriminateure.png" width="500">
 </p>
  
 ## Le générateur : 
@@ -106,7 +106,7 @@ L'entraînement du générateur nécessite une intégration plus étroite entre 
 *   perte du générateur, qui pénalise le générateur pour ne pas avoir réussi à tromper le discriminateur
  
 <p >
-  <img src="images/generateur.png" width="600">
+  <img src="images/generateur.png" width="500">
 </p>
 
 - Bruit aléatoire -> Generator -> Image générée ->Discriminator (juge)
@@ -174,7 +174,7 @@ Pense à un VAE comme une **machine à smoothies magique** dans une cuisine :
 
 ###  Architecture — comment ça marche
 <p >
-  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="600">
+  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="500">
 </p>
 
 
@@ -241,7 +241,7 @@ Un Variational Autoencoder (VAE) peut apprendre à représenter des objets comme
 Dans cet exemple, le modèle est entraîné sur des images issues du dataset *Fashion MNIST*. Une image est ensuite donnée en entrée au modèle, qui essaie de la reconstruire après l’avoir compressée dans un espace latent.
  
 <p >
-  <img src="images/vae_example.jpg" width="600">
+  <img src="images/vae_example.jpg" width="500">
 </p>
 
 **Explication :**
