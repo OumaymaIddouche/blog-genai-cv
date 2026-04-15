@@ -11,9 +11,9 @@
 2. [Explication ELI5 de l'architecture GAN](#2-explication-eli5-de-larchitecture-gan)
    - [Le Discriminateur](#le-descriminateur-)
    - [Le Générateur](#le-générateur-)
-   - [Avantages & Limites](#avantages--limites)
+   - [Avantages & Limites](#avantages-et-limites)
 3. [VAE — Variational Autoencoder](#3-vae--variational-autoencoder)
-   - [C'est quoi ? (ELI5)](#cest-quoi-eli5)
+   - [C'est quoi ? (ELI5)](#cest-quoi--eli5)
    - [Analogie : machine à smoothies magique](#lanalogie--la-machine-à-smoothies-magique)
    - [Architecture](#architecture--comment-ça-marche)
    - [Fonction de perte](#la-fonction-de-perte-loss-function)
@@ -21,13 +21,13 @@
    - [Limites](#limites-du-vae)
    - [Exemple concret](#exemple-concret--reconstruction-de-vêtements-avec-un-vae)
 4. [Modèles de Diffusion et Analyse Comparative](#modèles-de-diffusion-et-analyse-comparative-des-architectures-génératives)
-   - [Qu'est-ce qu'un modèle de diffusion ?](#1-quest-ce-quun-modèle-de-diffusion-eli5)
-   - [Analogie](#2-analogie--lexpert-en-restauration-dimages)
-   - [Diagramme du processus](#3-diagramme-du-processus)
-   - [Comment ça marche](#4-comment-ça-marche-en-pratique)
-   - [Avantages & Limites](#5-avantages-et-limites)
-   - [Tableau comparatif](#6-tableau-comparatif-des-architectures)
-   - [Conclusion](#7-conclusion-du-blog)
+   - [Qu'est-ce qu'un modèle de diffusion ?](#quest-ce-quun-modèle-de-diffusion--eli5)
+   - [Analogie](#analogie--lexpert-en-restauration-dimages)
+   - [Diagramme du processus](#diagramme-du-processus)
+   - [Comment ça marche](#comment-ça-marche-en-pratique)
+   - [Avantages & Limites](#avantages-et-limites)
+   - [Tableau comparatif](#tableau-comparatif-des-architectures)
+   - [Conclusion](#conclusion-du-blog)
 
 ---
 
@@ -157,7 +157,7 @@ Il ajuste ses paramètres via :
 
 Backpropagation (indirecte)
 
-## Avantages & Limites :
+## Avantages et Limites :
 
 | Critère | Avantage | Limite |
 |---------|----------|--------|
@@ -170,8 +170,6 @@ Backpropagation (indirecte)
 
 
 ---
-
-## 3. VAE — Variational Autoencoder
 
 ## 3. VAE — Variational Autoencoder
 
@@ -292,10 +290,8 @@ Cet exemple montre que le VAE comprend la structure globale des données et peut
 
 # Modèles de Diffusion et Analyse Comparative des Architectures Génératives
 
-# Modèles de Diffusion et Analyse Comparative des Architectures Génératives
 
-
-## 1. Qu'est-ce qu'un Modèle de Diffusion ? (ELI5)
+## Qu'est-ce qu'un Modèle de Diffusion ? (ELI5)
 
 Commencez par une image **claire** et **nette**.
 
@@ -311,7 +307,7 @@ C'est exactement ainsi que fonctionnent *Stable Diffusion*, *DALL-E* et *Midjour
 
 ---
 
-## 2. Analogie : L'Expert en Restauration d'Images
+## Analogie : L'Expert en Restauration d'Images
 
 Imaginez un professionnel spécialisé dans la restauration de photographies endommagées.
 
@@ -326,7 +322,7 @@ Imaginez un professionnel spécialisé dans la restauration de photographies end
 
 ---
 
-## 3. Diagramme du Processus
+## Diagramme du Processus
 
 **Diagramme — Processus de diffusion direct et inverse (DDPM)** *Source : ResearchGate — Ghojogh & Ghodsi (2024)*
 ![Generative AI Schema](images/The-forward-and-backward-processes-of-the-diffusion-model-The-credit-of-the-used-images.ppm)
@@ -338,20 +334,20 @@ Imaginez un professionnel spécialisé dans la restauration de photographies end
 
 
 
-### ★ Processus Direct (Diffusion) — Ajout de bruit
+### Processus Direct (Diffusion) — Ajout de bruit
 ```text
 Image (t=0)  -->  Légèrement bruitée (t=T/2)  -->  Bruit pur (t=T)
                (+ ajout de bruit gaussien à chaque étape)
 
 ```
-### ★ Processus Inverse (Génération) — Suppression du bruit
+### Processus Inverse (Génération) — Suppression du bruit
 ```text
 Bruit pur (t=T)  -->  Partiellement débruitée (t=T/2)  -->  Image générée (t=0)
                (- le réseau prédit et soustrait le bruit)
 
 ```
 
-## 4. Comment ça Marche en Pratique
+## Comment ça Marche en Pratique
 
 L'ensemble du processus se décompose en deux phases distinctes :
 
@@ -369,21 +365,21 @@ L'ensemble du processus se décompose en deux phases distinctes :
 
 ---
 
-## 5. Avantages et Limites
+## Avantages et Limites
 
-### ★ Points Forts
+### Points Forts
 * **Qualité Supérieure** : Produit les images les plus réalistes et détaillées actuellement.
 * **Diversité** : Grande variété de résultats (évite le phénomène de "mode collapse").
 * **Stabilité** : Processus d'entraînement beaucoup plus stable que celui des GAN.
 
-### ★ Points Faibles
+### Points Faibles
 * **Lenteur** : Nécessite de nombreux calculs successifs pour générer une seule image.
 * **Ressources** : Demande une puissance de calcul (GPU) très importante.
 * **Complexité** : L'espace interne est moins "lisible" ou structuré que celui des VAE.
 
 ---
 
-## 6. Tableau Comparatif des Architectures
+## Tableau Comparatif des Architectures
 
 | **Critère** | **GAN** | **VAE** | **Modèles de Diffusion** |
 | :--- | :--- | :--- | :--- |
@@ -395,7 +391,7 @@ L'ensemble du processus se décompose en deux phases distinctes :
 
 ---
 
-## 7. Conclusion du Blog
+## Conclusion du Blog
 
 L'évolution de la vision par ordinateur a suivi trois grandes étapes clés :
 
