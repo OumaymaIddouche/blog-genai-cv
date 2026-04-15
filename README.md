@@ -48,6 +48,7 @@ qui n'ont jamais existé.
 C'est comme un enfant qui regarde des milliers de dessins
 de chats, et qui finit par pouvoir en dessiner un tout seul.
 
+
 <p align="center">
   <img src="images/GENAI.webp"><br>
   <em>Schéma du Generative AI : le modèle apprend à partir de données existantes pour générer de nouvelles images.</em>
