@@ -10,7 +10,7 @@ Imagine :
 *	Un policier qui détecte les faux 
 Le cycle :
 1.	Le faussaire crée un faux billet 
-2.	Le policier dit : “FAUX ❌” 
+2.	Le policier dit : “FAUX ” 
 3.	Le faussaire s’améliore 
 4.	Le policier devient plus intelligent 
 Résultat final : Les faux billets deviennent indétectables
@@ -29,8 +29,8 @@ Le Discriminateur est simplement un classificateur.
 	* des données générées 
 2.	Il fait une prédiction (réel ou fake) 
 3.	On calcule une perte (erreur) : 
-    * erreur si une vraie donnée est classée fake ❌ 
-    * erreur si une fausse est classée réelle ❌ 
+    * erreur si une vraie donnée est classée fake 
+    * erreur si une fausse est classée réelle 
 4.	Il met à jour ses poids via backpropagation 
 Comment il apprend ?
 	* Le discriminateur apprend grâce à ses erreurs.
@@ -59,18 +59,18 @@ Les étapes :
 1.	Le Générateur reçoit un vecteur aléatoire (ex: distribution normale) 
 2.	Il génère une fausse donnée 
 3.	Le Discriminateur analyse cette donnée 
-4.	Si le Discriminateur détecte que c’est faux ❌ : 
+4.	Si le Discriminateur détecte que c’est faux : 
 	o Une erreur est calculée 
 5.	Cette erreur est renvoyée au Générateur 
 6.	Le Générateur met à jour ses poids (backpropagation) 
 
-👉 Objectif : maximiser les chances de tromper le Discriminateur
+Objectif : maximiser les chances de tromper le Discriminateur
 
 Mise à jour :
 
 Il ajuste ses paramètres via :
 
-👉 Backpropagation (indirecte)
+Backpropagation (indirecte)
 
 ## Avantages & Limites :
 
