@@ -6,7 +6,8 @@
 - Ahlame Soulaimi
 - Douae Nacir
 - Mohamed Amine Agrar
-
+  
+---
 ## Contexte
 Ce blog a été réalisé dans le cadre d’un travail académique portant sur le Generative AI en Computer Vision.  
 L’objectif est de comprendre comment les modèles génératifs permettent de créer de nouvelles images à partir de données existantes, en s’appuyant sur des architectures modernes comme les GAN, les VAE et les modèles de diffusion.
