@@ -91,7 +91,9 @@ Pendant l'entraînement du discriminateur:
 2.	La perte du discriminateur pénalise le discriminateur pour avoir mal classé une instance réelle comme fausse ou une instance fausse comme réelle.
 3.	Le discriminateur met à jour ses poids via la propagation inverse à partir de la perte du discriminateur via le réseau du discriminateur.
 
-![descriminateur](images/discriminateure.png)
+<p >
+  <img src="images/discriminateure.png" width="600">
+</p>
  
 ## Le générateur : 
 
@@ -103,7 +105,9 @@ L'entraînement du générateur nécessite une intégration plus étroite entre 
 * 	sortie du discriminateur
 *   perte du générateur, qui pénalise le générateur pour ne pas avoir réussi à tromper le discriminateur
  
-![Architecture GAN](images/generateur.png)
+<p >
+  <img src="images/generateur.png" width="600">
+</p>
 
 - Bruit aléatoire -> Generator -> Image générée ->Discriminator (juge)
 
@@ -169,8 +173,10 @@ Pense à un VAE comme une **machine à smoothies magique** dans une cuisine :
 ---
 
 ###  Architecture — comment ça marche
+<p >
+  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="600">
+</p>
 
-![Architecture VAE](images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg)
 
 *Architecture complète du VAE : l'encodeur produit μ et σ, un bruit ε est échantillonné depuis N(0,I), puis z = μ + σ⊙ε est décodé pour reconstruire x̂. Deux pertes sont minimisées simultanément : la reconstruction (x - x̂)² et la KL-divergence.*
 
@@ -233,8 +239,10 @@ Loss totale = Reconstruction Loss + β × KL Loss
 Un Variational Autoencoder (VAE) peut apprendre à représenter des objets comme des vêtements ou des chaussures, puis tenter de les reconstruire à partir de cette représentation.
 
 Dans cet exemple, le modèle est entraîné sur des images issues du dataset *Fashion MNIST*. Une image est ensuite donnée en entrée au modèle, qui essaie de la reconstruire après l’avoir compressée dans un espace latent.
-
-![Reconstruction VAE](./images/vae_example.jpg)
+ 
+<p >
+  <img src="images/vae_example.jpg" width="600">
+</p>
 
 **Explication :**
 
