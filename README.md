@@ -1,3 +1,36 @@
+
+# Blog : Generative AI en Computer Vision
+
+## Table des matières
+1. [Introduction au Generative AI en Computer Vision](#introduction-au-generative-ai-en-computer-vision)
+   - [C'est quoi le Generative AI ?](#cest-quoi-le-generative-ai-)
+   - [C'est quoi le Generative AI en Computer Vision ?](#cest-quoi-le-generative-ai-en-computer-vision-)
+   - [Un peu d'histoire](#un-peu-dhistoire)
+   - [Les outils populaires](#les-outils-populaires)
+   - [Pourquoi utiliser le GenAI en Computer Vision ?](#pourquoi-utiliser-le-genai-en-computer-vision-)
+2. [Explication ELI5 de l'architecture GAN](#2-explication-eli5-de-larchitecture-gan)
+   - [Le Discriminateur](#le-descriminateur-)
+   - [Le Générateur](#le-générateur-)
+   - [Avantages & Limites](#avantages--limites)
+3. [VAE — Variational Autoencoder](#3-vae--variational-autoencoder)
+   - [C'est quoi ? (ELI5)](#cest-quoi-eli5)
+   - [Analogie : machine à smoothies magique](#lanalogie--la-machine-à-smoothies-magique)
+   - [Architecture](#architecture--comment-ça-marche)
+   - [Fonction de perte](#la-fonction-de-perte-loss-function)
+   - [Avantages](#avantages-du-vae)
+   - [Limites](#limites-du-vae)
+   - [Exemple concret](#exemple-concret--reconstruction-de-vêtements-avec-un-vae)
+4. [Modèles de Diffusion et Analyse Comparative](#modèles-de-diffusion-et-analyse-comparative-des-architectures-génératives)
+   - [Qu'est-ce qu'un modèle de diffusion ?](#1-quest-ce-quun-modèle-de-diffusion-eli5)
+   - [Analogie](#2-analogie--lexpert-en-restauration-dimages)
+   - [Diagramme du processus](#3-diagramme-du-processus)
+   - [Comment ça marche](#4-comment-ça-marche-en-pratique)
+   - [Avantages & Limites](#5-avantages-et-limites)
+   - [Tableau comparatif](#6-tableau-comparatif-des-architectures)
+   - [Conclusion](#7-conclusion-du-blog)
+
+---
+
 # Introduction au Generative AI en Computer Vision
 
 ## C'est quoi le Generative AI ?
@@ -15,10 +48,7 @@ qui n'ont jamais existé.
 C'est comme un enfant qui regarde des milliers de dessins
 de chats, et qui finit par pouvoir en dessiner un tout seul.
 
-<p align="center">
-  <img src="images/GENAI.webp"><br>
-  <em>Schéma du Generative AI : le modèle apprend à partir de données existantes pour générer de nouvelles images.</em>
-</p>
+![Generative AI Schema](images/GENAI.webp)
 
 ## Un peu d'histoire
 
@@ -52,6 +82,8 @@ différentes pour entraîner le modèle, sans avoir à les
 photographier une par une.
 
 
+---
+
 ## 2. Explication ELI5 de l'architecture GAN
 
 Un réseau antagoniste génératif (GAN) se compose de deux parties:
@@ -70,10 +102,7 @@ Résultat final : Les faux billets deviennent indétectables
 
 Architecture global :
  
-<p align="center">
-  <img src="images/1.png" width="450"><br>
-  <em>Architecture du GAN : le générateur crée des images et le discriminateur évalue leur authenticité.</em>
-</p>
+![Architecture GAN](images/1.png)
 
 
 ## Le descriminateur :
@@ -95,10 +124,7 @@ Pendant l'entraînement du discriminateur:
 2.	La perte du discriminateur pénalise le discriminateur pour avoir mal classé une instance réelle comme fausse ou une instance fausse comme réelle.
 3.	Le discriminateur met à jour ses poids via la propagation inverse à partir de la perte du discriminateur via le réseau du discriminateur.
 
-<p align="center">
-  <img src="images/discriminateure.png" width="450"><br>
-  <em>Le discriminateur apprend à distinguer les images réelles des images générées.</em>
-</p>
+![descriminateur](images/discriminateure.png)
  
 ## Le générateur : 
 
@@ -110,11 +136,7 @@ L'entraînement du générateur nécessite une intégration plus étroite entre 
 * 	sortie du discriminateur
 *   perte du générateur, qui pénalise le générateur pour ne pas avoir réussi à tromper le discriminateur
  
-<p align="center">
-  <img src="images/generateur.png" width="450"><br>
-  <em>Le générateur transforme un bruit aléatoire en image pour tromper le discriminateur.</em>
-</p>
-
+![Architecture GAN](images/generateur.png)
 
 - Bruit aléatoire -> Generator -> Image générée ->Discriminator (juge)
 
@@ -147,6 +169,9 @@ Backpropagation (indirecte)
 | Flexibilité | Nombreuses variantes | Chaque variante demande un réglage spécifique |
 
 
+---
+
+## 3. VAE — Variational Autoencoder
 
 ## 3. VAE — Variational Autoencoder
 
@@ -181,11 +206,7 @@ Pense à un VAE comme une **machine à smoothies magique** dans une cuisine :
 
 ###  Architecture — comment ça marche
 
-<p align="center">
-  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="400"><br>
-  <em>Architecture du VAE : l’encodeur compresse l’image en espace latent, puis le décodeur la reconstruit.</em>
-</p>
-
+![Architecture VAE](images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg)
 
 *Architecture complète du VAE : l'encodeur produit μ et σ, un bruit ε est échantillonné depuis N(0,I), puis z = μ + σ⊙ε est décodé pour reconstruire x̂. Deux pertes sont minimisées simultanément : la reconstruction (x - x̂)² et la KL-divergence.*
 
@@ -248,11 +269,8 @@ Loss totale = Reconstruction Loss + β × KL Loss
 Un Variational Autoencoder (VAE) peut apprendre à représenter des objets comme des vêtements ou des chaussures, puis tenter de les reconstruire à partir de cette représentation.
 
 Dans cet exemple, le modèle est entraîné sur des images issues du dataset *Fashion MNIST*. Une image est ensuite donnée en entrée au modèle, qui essaie de la reconstruire après l’avoir compressée dans un espace latent.
- 
-<p align="center">
-  <img src="images/vae_example.jpg" width="400"><br>
-  <em>Exemple de reconstruction : le VAE reproduit l’image mais avec un léger flou.</em>
-</p>
+
+![Reconstruction VAE](./images/vae_example.jpg)
 
 **Explication :**
 
@@ -270,6 +288,9 @@ Le VAE peut être vu comme un système qui apprend à résumer une image sous fo
 
 Cet exemple montre que le VAE comprend la structure globale des données et peut les reconstruire. Toutefois, en raison de son approche probabiliste, les résultats sont généralement moins nets que les images originales.
 
+---
+
+# Modèles de Diffusion et Analyse Comparative des Architectures Génératives
 
 # Modèles de Diffusion et Analyse Comparative des Architectures Génératives
 
