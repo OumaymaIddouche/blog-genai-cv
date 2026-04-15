@@ -67,7 +67,9 @@ Résultat final : Les faux billets deviennent indétectables
 
 Architecture global :
  
-![Architecture GAN](images/1.png)
+<p >
+  <img src="images/1.png" width="600">
+</p>
 
 
 ## Le descriminateur :
