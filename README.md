@@ -1,10 +1,37 @@
 
 # Blog : Generative AI en Computer Vision
+
 ## Auteurs
 - Oumayma Iddouche
 - Ahlame Soulaimi
 - Douae Nacir
 - Mohamed Amine Agrar
+
+## Contexte
+Ce blog a été réalisé dans le cadre d’un travail académique portant sur le Generative AI en Computer Vision.  
+L’objectif est de comprendre comment les modèles génératifs permettent de créer de nouvelles images à partir de données existantes, en s’appuyant sur des architectures modernes comme les GAN, les VAE et les modèles de diffusion.
+
+## Objectifs du blog
+
+- Comprendre les bases du Generative AI
+- Expliquer de manière simple (ELI5) le fonctionnement des principaux modèles génératifs
+- Étudier les architectures GAN, VAE et Diffusion Models
+- Comparer leurs avantages et leurs limites
+- Illustrer les concepts avec des exemples et des schémas
+
+## Public cible
+
+Ce blog s’adresse principalement aux étudiants débutants en intelligence artificielle, en machine learning et en computer vision.
+
+## Prérequis
+
+- Notions de base en intelligence artificielle (optionnel)
+- Compréhension élémentaire du machine learning
+- Curiosité pour les modèles génératifs et la vision par ordinateur
+
+---
+
+
 ## Table des matières
 1. [Introduction au Generative AI en Computer Vision](#introduction-au-generative-ai-en-computer-vision)
    - [C'est quoi le Generative AI ?](#cest-quoi-le-generative-ai-)
