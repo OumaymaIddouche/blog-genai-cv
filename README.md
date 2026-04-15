@@ -48,7 +48,10 @@ qui n'ont jamais existé.
 C'est comme un enfant qui regarde des milliers de dessins
 de chats, et qui finit par pouvoir en dessiner un tout seul.
 
-![Generative AI Schema](images/GENAI.webp)
+<p align="center">
+  <img src="images/GENAI.webp"><br>
+  <em>Schéma du Generative AI : le modèle apprend à partir de données existantes pour générer de nouvelles images.</em>
+</p>
 
 ## Un peu d'histoire
 
@@ -102,7 +105,11 @@ Résultat final : Les faux billets deviennent indétectables
 
 Architecture global :
  
-![Architecture GAN](images/1.png)
+
+<p align="center">
+  <img src="images/1.png" width="450"><br>
+  <em>Architecture du GAN : le générateur crée des images et le discriminateur évalue leur authenticité.</em>
+</p>
 
 
 ## Le descriminateur :
@@ -124,7 +131,10 @@ Pendant l'entraînement du discriminateur:
 2.	La perte du discriminateur pénalise le discriminateur pour avoir mal classé une instance réelle comme fausse ou une instance fausse comme réelle.
 3.	Le discriminateur met à jour ses poids via la propagation inverse à partir de la perte du discriminateur via le réseau du discriminateur.
 
-![descriminateur](images/discriminateure.png)
+<p align="center">
+  <img src="images/discriminateure.png" width="450"><br>
+  <em>Le discriminateur apprend à distinguer les images réelles des images générées.</em>
+</p>
  
 ## Le générateur : 
 
@@ -136,7 +146,10 @@ L'entraînement du générateur nécessite une intégration plus étroite entre 
 * 	sortie du discriminateur
 *   perte du générateur, qui pénalise le générateur pour ne pas avoir réussi à tromper le discriminateur
  
-![Architecture GAN](images/generateur.png)
+<p align="center">
+  <img src="images/generateur.png" width="450"><br>
+  <em>Le générateur transforme un bruit aléatoire en image pour tromper le discriminateur.</em>
+</p>
 
 - Bruit aléatoire -> Generator -> Image générée ->Discriminator (juge)
 
@@ -204,8 +217,10 @@ Pense à un VAE comme une **machine à smoothies magique** dans une cuisine :
 
 ###  Architecture — comment ça marche
 
-![Architecture VAE](images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg)
-
+<p align="center">
+  <img src="images/1_r1R0cxCnErWgE0P4Q-hI0Q.jpg" width="450"><br>
+  <em>Architecture du VAE : l’encodeur compresse l’image en espace latent, puis le décodeur la reconstruit.</em>
+</p>
 *Architecture complète du VAE : l'encodeur produit μ et σ, un bruit ε est échantillonné depuis N(0,I), puis z = μ + σ⊙ε est décodé pour reconstruire x̂. Deux pertes sont minimisées simultanément : la reconstruction (x - x̂)² et la KL-divergence.*
 
 Le VAE est composé de **deux réseaux de neurones** :
@@ -268,7 +283,10 @@ Un Variational Autoencoder (VAE) peut apprendre à représenter des objets comme
 
 Dans cet exemple, le modèle est entraîné sur des images issues du dataset *Fashion MNIST*. Une image est ensuite donnée en entrée au modèle, qui essaie de la reconstruire après l’avoir compressée dans un espace latent.
 
-![Reconstruction VAE](./images/vae_example.jpg)
+<p align="center">
+  <img src="images/vae_example.jpg" width="400"><br>
+  <em>Exemple de reconstruction : le VAE reproduit l’image mais avec un léger flou.</em>
+</p>
 
 **Explication :**
 
@@ -325,12 +343,18 @@ Imaginez un professionnel spécialisé dans la restauration de photographies end
 ## Diagramme du Processus
 
 **Diagramme — Processus de diffusion direct et inverse (DDPM)** *Source : ResearchGate — Ghojogh & Ghodsi (2024)*
-![Generative AI Schema](images/The-forward-and-backward-processes-of-the-diffusion-model-The-credit-of-the-used-images.ppm)
+<p align="center">
+  <img src="images/The-forward-and-backward-processes-of-the-diffusion-model-The-credit-of-the-used-images.ppm" width="450"><br>
+  <em>Processus de diffusion : ajout progressif de bruit (forward) puis suppression du bruit pour reconstruire l’image (reverse).</em>
+</p>
 
 
 
 **Diagramme — Schéma du modèle de diffusion incluant l'architecture U-Net** *Source : ResearchGate*
-![Generative AI Schema](images/Schematics-of-diffusion-model-a-The-reverse-and-forward-diffusion-process-b-Time.webp)
+<p align="center">
+  <img src="images/Schematics-of-diffusion-model-a-The-reverse-and-forward-diffusion-process-b-Time.webp" width="450"><br>
+  <em>Architecture d’un modèle de diffusion utilisant un U-Net pour prédire et enlever le bruit à chaque étape.</em>
+</p>
 
 
 
